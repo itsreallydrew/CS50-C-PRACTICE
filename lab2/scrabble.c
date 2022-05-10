@@ -58,7 +58,12 @@ int compute_score(string word)
         // printf("%i\n", index);
 
         // Set the index of each score to be equal to the value of the POINTS at the index defined above
-        score[i] = POINTS[index];
+        if (index < 0 || index > 25)
+        {
+            score[i] = 0;
+        }
+        else
+            score[i] = POINTS[index];
 
         // Add the points value to the total score
         total_score += score[i];

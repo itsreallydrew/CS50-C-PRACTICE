@@ -4,8 +4,6 @@
 int main(void)
 {
     int num = get_long("Number: ");
-
-    printf("%i\n", num % 100);
 }
 
 /*****************************/

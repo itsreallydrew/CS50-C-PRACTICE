@@ -18,18 +18,21 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
-    // TODO: Print the winner
+    // Print the winner
     if (score1 > score2)
     {
         printf("Player 1 wins!\n");
+        return 0;
     }
     else if (score2 > score1)
     {
         printf("Player 2 wins!\n");
+        return 0;
     }
     else
     {
         printf("Tie!\n");
+        return 0;
     }
 }
 
@@ -55,8 +58,6 @@ int compute_score(string word)
         // Change the character of each word to uppercase. Set the index to equal the value of the uppercase character minus 65 -- matches up with the POINTS array
         int index = toupper(word[i]) - 65;
 
-        // printf("%i\n", index);
-
         // Set the index of each score to be equal to the value of the POINTS at the index defined above
         if (index < 0 || index > 25)
         {
@@ -69,6 +70,5 @@ int compute_score(string word)
         total_score += score[i];
     }
 
-    // printf("%i\n", total_score);
     return total_score;
 }

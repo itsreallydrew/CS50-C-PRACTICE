@@ -85,29 +85,29 @@ void print_winner(void)
 {
     // Start with the first index and store in a temp variable
 
-    int top_votes = 0;
-    string winner;
-
     // For each entry in the array compare the number of votes
 
     // Update the temp variable with the entry that has the largest number of votes
 
     // When finished print the name of the entry that has the largest number of votes
 
+    int top_votes = 0;
+    string winner;
+
     for (int i = 0; i < candidate_count; i++)
     {
-        // printf("Candidate %s received %i votes\n", candidates[i].name, candidates[i].votes);
         top_votes = candidates[0].votes;
         winner = candidates[0].name;
         if (candidates[i].votes > top_votes)
         {
             top_votes = candidates[i].votes;
             winner = candidates[i].name;
+            printf("%s", winner);
+        }
+        else if (candidates[i].votes == top_votes)
+        {
+            // If top votes is equal to candidate votes print candidate as a winner
+            printf("%s\n", candidates[i].name);
         }
     }
-
-    printf("%i\n", top_votes);
-    printf("%s\n", winner);
-
-    // TODO
 }

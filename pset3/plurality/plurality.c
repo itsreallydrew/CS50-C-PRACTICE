@@ -81,6 +81,29 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
+    // Start with the first index and store in a temp variable
+
+    int top_votes;
+    string winner;
+
+    // For each entry in the array compare the number of votes
+
+    // Update the temp variable with the entry that has the largest number of votes
+
+    // When finished print the name of the entry that has the largest number of votes
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        int top_votes = candidates[0].votes;
+        if (candidates[i].votes > top_votes)
+        {
+            top_votes = candidates[i].votes;
+            winner = candidates[i].name;
+        }
+    }
+
+    printf("%s\n", winner);
+
     // TODO
-    return;
+    return 0;
 }

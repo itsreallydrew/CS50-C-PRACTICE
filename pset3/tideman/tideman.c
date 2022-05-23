@@ -122,13 +122,15 @@ void record_preferences(int ranks[])
     // RECORD the preference of candidate i over candidate j
     for (int i = 0; i < candidate_count; i++)
     {
+        // printf("This is the rank: %d ", ranks[i]);
         for (int j = 0; j < candidate_count; j++)
         {
-            printf("This is the rank: %d ", ranks[i]);
+            if (ranks[i] < ranks[j])
+            {
+                preferences[i][j]++;
+            }
         }
     }
-
-    // TODO
     return;
 }
 
